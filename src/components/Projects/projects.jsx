@@ -19,8 +19,7 @@ function Projects() {
           <div className="projects__grid">
             <ProjectCard
               title="PelisFind"
-              description="Buscador de películas con React y API externa. Muestra los ultimos 
-                           estrenos de peliculas con sus elencos"
+              description="Buscador de películas con React y API externa. Muestra los ultimos estrenos de peliculas con sus elencos"
               image="/images/project-movies.jpg"
               onClick={() => setActiveModal('project1')}
             />

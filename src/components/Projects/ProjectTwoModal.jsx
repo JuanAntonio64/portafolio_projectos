@@ -39,7 +39,7 @@ function ProjectOneModal({ onClose }) {
           <img src="/images/project-alrededoreu-2.png" alt="Detalle" />
 
           <a
-            href="https://apifull.bad.mn/"
+            href="#"
             target="_blank"
             rel="noopener noreferrer"
             className="modal__button"

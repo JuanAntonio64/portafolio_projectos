@@ -36,7 +36,7 @@ function ProjectOneModal({ onClose }) {
           <img src="/images/project-pelisfind-2.png" alt="Detalle película" />
 
           <a
-            href="https://my-repository-pelis-find.vercel.app/"
+            href="#"
             target="_blank"
             rel="noopener noreferrer"
             className="modal__button"

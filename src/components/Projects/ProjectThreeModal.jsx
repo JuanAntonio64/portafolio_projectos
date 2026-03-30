@@ -37,7 +37,7 @@ function ProjectOneModal({ onClose }) {
           <img src="/images/project-Cafeteria-2.png" alt="Detalle" />
 
           <a
-            href="https://my-repository-two-bice.vercel.app/"
+            href="#"
             target="_blank"
             rel="noopener noreferrer"
             className="modal__button"
