@@ -1,0 +1,166 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 2rem;
+  animation: fadeIn 0.25s ease forwards;
+}
+
+.modal {
+  background: #0b0f3a;
+  border-radius: 14px;
+  width: 100%;
+  max-height: 90vh;
+  position: relative;
+  overflow: hidden; 
+  animation: scaleIn 0.3s ease forwards;
+}
+
+.modal--split {
+  max-width: 1100px;
+}
+
+.modal__scroll {
+  padding: 3rem;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  font-size: 1.4rem;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* layout */
+.modal__layout {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2rem;
+}
+
+.modal__text h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #f5f5f7;
+}
+
+.modal__text p {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+  color: #cfcfe6;
+}
+
+.modal__media {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.modal__media img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+.modal__button {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.9rem 2.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+
+  background: linear-gradient(
+    135deg,
+    var(--accent),
+    var(--accent-glow)
+  );
+
+  border-radius: 8px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
+}
+
+.modal__button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 60, 123, 0.35);
+  opacity: 0.95;
+}
+
+.fade-out {
+  animation: fadeOut 0.25s ease forwards;
+}
+
+.scale-out {
+  animation: scaleOut 0.25s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes scaleOut {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.96);
+    opacity: 0;
+  }
+}
+
+
+
+/* Responsivo*/
+@media (max-width: 900px) {
+  .modal__scroll {
+    padding: 2rem 1.5rem;
+  }
+
+  .modal__layout {
+    grid-template-columns: 1fr;
+  }
+}
